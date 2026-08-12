@@ -1,0 +1,13 @@
+{
+  "builds": [{
+    "src": "next.config.ts",
+    "use": "@vercel/next"
+  }],
+  "env": {
+    "GMAIL_CLIENT_ID": "@gmail_client_id",
+    "GMAIL_CLIENT_SECRET": "@gmail_client_secret",
+    "GMAIL_REDIRECT_URI": "@gmail_redirect_uri",
+    "GMAIL_REFRESH_TOKEN": "@gmail_refresh_token",
+    "GMAIL_SENDER_EMAIL": "@gmail_sender_email"
+  }
+}
