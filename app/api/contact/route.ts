@@ -1,5 +1,6 @@
 // app/api/contact/route.ts
 
+import { NextResponse } from "next/server";
 import { sendGmail } from "@/lib/gmail";
 
 interface ContactPayload {
@@ -20,7 +21,7 @@ export async function POST(request: Request) {
       );
     }
 
-    import { sendGmail } from "@/lib/gmail";
+
 
     // Send email via Gmail API
     const emailHtml = `
