@@ -7,8 +7,8 @@ const points = [
     icon: "/icons/feature-independent.png",
   },
   {
-    title: "USPAP-Informed Reports",
-    desc: "Professional appraisal reports meeting industry standards.",
+    title: "Professional Reports",
+    desc: "Detailed, USPAP-informed appraisal reports.",
     icon: "/icons/feature-uspap.png",
   },
   {
@@ -22,8 +22,8 @@ const points = [
     icon: "/icons/feature-insurance-claim.png",
   },
   {
-    title: "Attorney & Litigation Support",
-    desc: "Expert opinions, rebuttals, and court-ready reports.",
+    title: "Attorney Support",
+    desc: "Expert opinions and rebuttals available on your behalf.",
     icon: "/icons/feature-attorney.png",
   },
 ];

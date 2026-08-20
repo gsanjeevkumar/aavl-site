@@ -1,8 +1,8 @@
 // lib/site.ts
 
 export const siteConfig = {
-  name: "Auto Accident Value Loss",
-  url: "https://diminishedvalueexperts.com",
+  name: "Recover Accident Value",
+  url: "https://recoveraccidentvalue.com",
   description:
     "Professional diminished value appraisal services helping vehicle owners recover compensation after an accident.",
 
@@ -11,11 +11,11 @@ export const siteConfig = {
     "diminished value appraisal",
     "vehicle value loss",
     "insurance appraisal",
-    "auto accident value loss",
+    "recover accident value",
   ],
 
-  phone: "728-213-0495",
-  email: "autoaccidentvalueloss@gmail.com",
+  phone: "(728) 213-0495",
+  email: "info@recoveraccidentvalue.com",
 
   nav: [
     { label: "Home", href: "/" },
@@ -27,9 +27,9 @@ export const siteConfig = {
   ],
 
   social: [
-    { label: "Facebook", href: "https://facebook.com/autoaccidentvalueloss", icon: "facebook" },
-    { label: "Instagram", href: "https://instagram.com/autoaccidentvalueloss", icon: "instagram" },
-    { label: "LinkedIn", href: "https://linkedin.com/company/autoaccidentvalueloss", icon: "linkedin" },
-    { label: "X", href: "https://x.com/aavlclaims", icon: "twitter" },
+    { label: "Facebook", href: "https://facebook.com/recoveraccidentvalue", icon: "facebook" },
+    { label: "Instagram", href: "https://instagram.com/recoveraccidentvalue", icon: "instagram" },
+    { label: "LinkedIn", href: "https://linkedin.com/company/recoveraccidentvalue", icon: "linkedin" },
+    { label: "X", href: "https://x.com/ravclaims", icon: "twitter" },
   ],
 };

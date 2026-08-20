@@ -24,12 +24,12 @@ export default function Hero() {
         </p>
 
         <div className="mt-8 flex gap-4">
-          <button className="bg-accent text-black px-8 py-4 rounded">
+          <button className="bg-accent text-white px-8 py-4 rounded">
             Free Claim Review
           </button>
 
           <button className="border px-8 py-4 rounded">
-            Call 728-213-0495
+            Call (728) 213-0495
           </button>
         </div>
       </div>

@@ -15,24 +15,24 @@
   --popover: #ffffff;
   --popover-foreground: #1f2937;
 
-  --primary: #0b2341;
+  --primary: #0a1b33;
   --primary-foreground: #ffffff;
 
-  --secondary: #112b4d;
+  --secondary: #0f2a52;
   --secondary-foreground: #ffffff;
 
   --muted: #f5f7fa;
   --muted-foreground: #6b7280;
 
-  --accent: #d4a017;
-  --accent-foreground: #1f2937;
+  --accent: #1e56a0;
+  --accent-foreground: #ffffff;
 
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
 
   --border: #e5e7eb;
   --input: #e5e7eb;
-  --ring: #d4a017;
+  --ring: #1e56a0;
 }
 
 @theme inline {

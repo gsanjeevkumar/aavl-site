@@ -10,16 +10,13 @@ export default function ContactPage() {
       <div className="relative mx-auto mb-10 aspect-4/3 w-full max-w-sm overflow-hidden rounded-lg">
         <Image
           src="/contact-hero.jpg"
-          alt="Auto Accident Value Loss appraiser ready to assist with your claim"
+          alt="Recover Accident Value appraiser ready to assist with your claim"
           fill
           className="object-cover"
         />
       </div>
 
-      <div className="flex items-center gap-4">
-        <h1 className="text-4xl font-bold text-foreground">Contact Us</h1>
-        <Image src="/keyfob.png" alt="" width={56} height={44} className="object-contain" />
-      </div>
+      <h1 className="text-4xl font-bold text-foreground">Contact Us</h1>
       <p className="mt-4 text-muted-foreground">
         Request a free consultation. Call {siteConfig.phone} or send us a
         message below.

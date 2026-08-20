@@ -4,9 +4,9 @@ const tailwindConfig = {
   theme: {
     extend: {
       colors: {
-        primary: "#0B2341",
-        secondary: "#112B4D",
-        accent: "#D4A017",
+        primary: "#0A1B33",
+        secondary: "#0F2A52",
+        accent: "#1E56A0",
         background: "#FFFFFF",
         muted: "#F5F7FA",
         text: "#1F2937",

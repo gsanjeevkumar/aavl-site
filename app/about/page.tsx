@@ -8,10 +8,10 @@ export default function AboutPage() {
       <div className="grid items-center gap-10 md:grid-cols-2">
         <div>
           <h1 className="text-5xl font-bold mb-8">
-            About Auto Accident Value Loss
+            About Recover Accident Value
           </h1>
           <p>
-            Auto Accident Value Loss specializes in
+            Recover Accident Value specializes in
             independent diminished value appraisals
             that help vehicle owners recover compensation
             after an accident.
