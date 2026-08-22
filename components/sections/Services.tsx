@@ -2,12 +2,12 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const services = [
-  { title: "Initial Claim Consultation", icon: "/icons/service-consultation.png" },
-  { title: "Accident Documentation Review", icon: "/icons/service-documentation.png" },
-  { title: "Repair Estimate Analysis", icon: "/icons/service-estimate.png" },
-  { title: "Repair Invoice Review", icon: "/icons/service-invoice.png" },
-  { title: "Insurance Estimate Comparison", icon: "/icons/service-insurance-comparison.png" },
-  { title: "Damage Severity Assessment", icon: "/icons/service-damage-assessment.png" },
+  { title: "Initial Claim Consultation", icon: "/assets/icons/services/claim-consultation.png" },
+  { title: "Accident Documentation Review", icon: "/assets/icons/services/accident-documentation.png" },
+  { title: "Repair Estimate Analysis", icon: "/assets/icons/services/repair-estimate-analysis.png" },
+  { title: "Repair Invoice Review", icon: "/assets/icons/services/repair-invoice-review.png" },
+  { title: "Insurance Estimate Comparison", icon: "/assets/icons/services/insurance-estimate-comparison.png" },
+  { title: "Damage Severity Assessment", icon: "/assets/icons/services/damage-severity-assessment.png" },
 ];
 
 export default function Services() {

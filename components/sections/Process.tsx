@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const steps = [
-  { title: "Contact Us", desc: "Share your accident details.", icon: "/icons/process-1.png" },
-  { title: "We Evaluate", desc: "Review documents and vehicle damage.", icon: "/icons/process-2.png" },
-  { title: "Receive Report", desc: "Get a detailed appraisal report.", icon: "/icons/process-3.png" },
-  { title: "Claim Your Lost Value", desc: "Secure fair compensation.", icon: "/icons/process-4.png" },
+  { title: "Contact Us", desc: "Share your accident details.", icon: "/assets/icons/services/contact-us.png" },
+  { title: "We Evaluate", desc: "Review documents and vehicle damage.", icon: "/assets/icons/services/claim-consultation.png" },
+  { title: "Receive Report", desc: "Get a detailed appraisal report.", icon: "/assets/icons/features/professional-reports.png" },
+  { title: "Claim Your Lost Value", desc: "Secure fair compensation.", icon: "/assets/icons/features/independent-unbiased.png" },
 ];
 
 export default function Process() {

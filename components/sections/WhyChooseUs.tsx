@@ -4,27 +4,27 @@ const points = [
   {
     title: "Independent & Unbiased",
     desc: "Evaluations that protect your rights, not the insurer's bottom line.",
-    icon: "/icons/feature-independent.png",
+    icon: "/assets/icons/features/independent-unbiased.png",
   },
   {
     title: "Professional Reports",
     desc: "Detailed, USPAP-informed appraisal reports.",
-    icon: "/icons/feature-uspap.png",
+    icon: "/assets/icons/features/professional-reports.png",
   },
   {
     title: "Fast Turnaround",
     desc: "Quick service when you need it most.",
-    icon: "/icons/feature-fast.png",
+    icon: "/assets/icons/features/fast-turnaround.png",
   },
   {
     title: "Insurance Claim Assistance",
     desc: "We work with insurers on your behalf.",
-    icon: "/icons/feature-insurance-claim.png",
+    icon: "/assets/icons/features/insurance-claim-assistance.png",
   },
   {
     title: "Attorney Support",
     desc: "Expert opinions and rebuttals available on your behalf.",
-    icon: "/icons/feature-attorney.png",
+    icon: "/assets/icons/features/attorney-support.png",
   },
 ];
 

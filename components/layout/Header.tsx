@@ -8,7 +8,7 @@ export default function Header() {
     <header className="border-b border-border bg-background">
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <Link href="/" className="flex items-center gap-2 text-lg font-bold text-primary">
-          <Image src="/logo.png" alt={`${siteConfig.name} logo`} width={36} height={35} />
+          <Image src="/assets/logos/logo-icon.png" alt={`${siteConfig.name} logo`} width={36} height={40} />
           {siteConfig.name}
         </Link>
 

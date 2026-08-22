@@ -7,7 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 export default function DiminishedValuePage() {
   return (
     <main className="container mx-auto max-w-3xl px-4 py-20">
-      <div className="relative mx-auto mb-10 aspect-square w-full max-w-sm overflow-hidden rounded-lg">
+      <div className="relative mx-auto mb-10 aspect-[235/128] w-full max-w-md overflow-hidden rounded-lg">
         <Image
           src="/diminished-value.jpg"
           alt="Tablet displaying a diminished value appraisal report"
