@@ -1,8 +1,9 @@
 import Image from "next/image";
+import InsuranceComparisonIcon from "@/public/icons/service-insurance-comparison.svg";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-primary text-white">
+    <section className="relative overflow-hidden bg-[url('/assets/images/backgrounds/hero/technology.jpg')] bg-cover bg-center bg-fixed">
       <Image
         src="/hero-car.jpg"
         alt="Luxury sedan representing a vehicle affected by diminished value"

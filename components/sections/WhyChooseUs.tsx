@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {points.map((point) => (
-            <div key={point.title} className="rounded-lg bg-background p-6 shadow-sm">
+            <div key={point.title} className="rounded-lg bg-[url('/assets/images/backgrounds/hero/technology.jpg')] bg-cover bg-center p-6 shadow-sm">
               <div className="relative size-12">
                 <Image src={point.icon} alt="" fill className="object-contain" />
               </div>

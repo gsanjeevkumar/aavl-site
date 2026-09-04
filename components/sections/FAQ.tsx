@@ -29,7 +29,7 @@ export default function FAQ() {
           Frequently Asked Questions
         </h1>
 
-        <div className="mt-10 divide-y divide-border rounded-lg border border-border">
+        <div className="mt-10 divide-y divide-border rounded-lg border border-border bg-[url('/assets/images/backgrounds/hero/technology.jpg')] bg-cover bg-center">
           {faqs.map((faq) => (
             <div key={faq.q} className="p-6">
               <h3 className="font-semibold text-foreground">{faq.q}</h3>

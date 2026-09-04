@@ -15,7 +15,7 @@ export default function Process() {
           Our Simple Process
         </h2>
 
-        <div className="mt-10 grid gap-8 md:grid-cols-4">
+        <div className="mt-10 grid gap-8 md:grid-cols-4 bg-[url('/assets/images/backgrounds/hero/technology.jpg')] bg-cover bg-center">
           {steps.map((step, index) => (
             <div key={step.title} className="text-center">
               <div className="relative mx-auto size-16">

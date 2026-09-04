@@ -20,7 +20,7 @@ export default function Services() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <Card key={service.title}>
+            <Card key={service.title} className="bg-[url('/assets/images/backgrounds/hero/technology.jpg')] bg-cover bg-center">
               <CardHeader>
                 <div className="relative mb-2 size-12">
                   <Image src={service.icon} alt="" fill className="object-contain" />

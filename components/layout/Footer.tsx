@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site";
 
-// lucide-react no longer ships brand/logo icons, so these are inlined.
+// Lucide‑like SVG icons embedded for social links
 const socialIcons = {
   facebook: (props: React.SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -18,12 +18,12 @@ const socialIcons = {
   ),
   linkedin: (props: React.SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3a1.96 1.96 0 1 0 0 3.92 1.96 1.96 0 0 0 0-3.92ZM20.5 20h-3.37v-6.06c0-1.45-.03-3.3-2.01-3.3-2.02 0-2.33 1.58-2.33 3.2V20H9.42V8.5h3.24v1.57h.05c.45-.86 1.56-1.77 3.21-1.77 3.44 0 4.08 2.26 4.08 5.2V20Z" />
+      <path d="M20.447 20.452c-0.944 0-1.872-0.072-2.754-0.203 0.562-1.088 0.938-2.317 0.938-3.713 0-4.179-3.382-7.562-7.562-7.562-4.181 0-7.563 3.383-7.563 7.562 0 1.343 0.333 2.607 0.902 3.718-0.579 0.092-1.136 0.14-1.693 0.14-0.151 0-0.295-0.003-0.438-0.017 0.697-1.069 1.094-2.42 1.094-3.898 0-4.197 3.402-7.604 7.587-7.604 1.903 0 3.628 0.711 4.918 1.878 1.29-1.167 3.013-1.878 4.918-1.878 4.181 0 7.587 3.406 7.587 7.587 0 1.498-0.397 2.854-1.089 3.915 1.1 0.131 2.045 0.203 2.063 0.203 0.021 0 0.039-0.015 0.039-0.033 0-0.022-0.003-0.047-0.021-0.062-0.053-0.061-1.975-1.764-2.73-2.291-0.293-0.093-0.573-0.188-0.836-0.187-1.158 0-0.712-0.73 4.182-0.005-0.003-0.873-4.079-1.016-5.562 0-2.06-1.777-1.826-5.758 9-5.722-0-2.4460191 0 .7042c3. Tw" />
     </svg>
   ),
   twitter: (props: React.SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-      <path d="M18.9 3H21l-6.6 7.55L22 21h-6.2l-4.86-6.4L5.35 21H3.24l7.06-8.07L2.5 3h6.35l4.39 5.86L18.9 3Zm-1.08 16.2h1.16L7.24 4.72H6L17.82 19.2Z" />
+      <path d="M12 2.22c-5.57 0-10 4.43-10 10 0 5.12 3.73 9.3 8.56 9.97.63.12.87-.28.87-.62 0-.3-.01-1.3-.01-2.27-3.49 0-4.21-3.31-4.21-3.31c-.73-1.86-1.8-2.4-1.8-2.4-1.47-1 .02-1.52-.3-2.4-1.48-4.2-6-3.85-11.6-3.5Z" />
     </svg>
   ),
 } as const;
@@ -42,21 +42,23 @@ export default function Footer() {
           </p>
 
           <div className="mt-4 flex items-center gap-3">
-            {siteConfig.social.map((item) => {
-              const Icon = socialIcons[item.icon as keyof typeof socialIcons];
-              return (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={item.label}
-                  className="flex size-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent hover:text-accent-foreground"
-                >
-                  <Icon className="size-4" />
-                </a>
-              );
-            })}
+            {siteConfig.social
+              .filter((item) => item.icon === "facebook" || item.icon === "instagram")
+              .map((item) => {
+                const Icon = socialIcons[item.icon as keyof typeof socialIcons];
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={item.label}
+                    className="flex size-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-accent hover:text-accent-foreground"
+                  >
+                    <Icon className="size-4" />
+                  </a>
+                );
+              })}
           </div>
         </div>
 

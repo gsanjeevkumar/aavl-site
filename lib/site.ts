@@ -27,8 +27,8 @@ export const siteConfig = {
   ],
 
   social: [
-    { label: "Facebook", href: "https://facebook.com/recoveraccidentvalue", icon: "facebook" },
-    { label: "Instagram", href: "https://instagram.com/recoveraccidentvalue", icon: "instagram" },
+    { label: "Facebook", href: "https://facebook.com/RamonaSantamaria", icon: "facebook" },
+    { label: "Instagram", href: "https://instagram.com/RecoverAccidentValue", icon: "instagram" },
     { label: "LinkedIn", href: "https://linkedin.com/company/recoveraccidentvalue", icon: "linkedin" },
     { label: "X", href: "https://x.com/ravclaims", icon: "twitter" },
   ],
