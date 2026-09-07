@@ -85,6 +85,17 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 py-4 text-center text-xs text-white/60">
+        <p className="mx-auto max-w-3xl px-4">
+          <strong>Disclaimer:</strong> Recover Accident Value is not a law firm
+          and does not provide legal advice or legal representation. Claims
+          requiring legal representation or submission to an insurance carrier
+          are handled through independent attorneys and law firms partnered
+          with RAV. No recovery is guaranteed. Submitting information through
+          this website does not create an attorney-client relationship.
+        </p>
+      </div>
+
+      <div className="border-t border-white/10 py-4 text-center text-xs text-white/60">
         © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
       </div>
     </footer>
