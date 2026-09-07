@@ -9,7 +9,7 @@ const services = [
   },
   {
     title: "Total Loss Valuation Disputes",
-    icon: "/assets/icons/services/insurance-estimate-comparison.png",
+    icon: "/assets/icons/services/repair-estimate-analysis.png",
     desc: "If you disagree with the valuation your insurer assigned to a totaled vehicle, we review the valuation and related documentation to determine whether it should be disputed.",
   },
   {
