@@ -10,8 +10,8 @@ export default function ContactCTA() {
           Don&apos;t Leave Money On The Table
         </h2>
         <p className="max-w-xl text-white/80">
-          Get a free consultation and find out how much diminished value
-          compensation you may be entitled to.
+          Get a free claim review and find out whether you may be entitled to
+          recover diminished value, total loss, or loss of use compensation.
         </p>
 
         <div className="flex flex-col gap-4 sm:flex-row">
@@ -19,7 +19,7 @@ export default function ContactCTA() {
             href="/contact"
             className={buttonVariants({ variant: "default", className: "bg-accent text-accent-foreground hover:bg-accent/90" })}
           >
-            Get Free Claim Review
+            Get a Free Claim Review
           </Link>
           <a
             href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}

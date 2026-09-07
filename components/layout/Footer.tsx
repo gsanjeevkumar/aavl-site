@@ -26,6 +26,11 @@ const socialIcons = {
       <path d="M12 2.22c-5.57 0-10 4.43-10 10 0 5.12 3.73 9.3 8.56 9.97.63.12.87-.28.87-.62 0-.3-.01-1.3-.01-2.27-3.49 0-4.21-3.31-4.21-3.31c-.73-1.86-1.8-2.4-1.8-2.4-1.47-1 .02-1.52-.3-2.4-1.48-4.2-6-3.85-11.6-3.5Z" />
     </svg>
   ),
+  tiktok: (props: React.SVGProps<SVGSVGElement>) => (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.3 0 .58.05.85.13V9.4a6.33 6.33 0 0 0-.85-.06 6.34 6.34 0 1 0 6.34 6.34V8.66a8.16 8.16 0 0 0 4.77 1.52v-3.45a4.85 4.85 0 0 1-1-.04Z" />
+    </svg>
+  ),
 } as const;
 
 export default function Footer() {
@@ -43,7 +48,7 @@ export default function Footer() {
 
           <div className="mt-4 flex items-center gap-3">
             {siteConfig.social
-              .filter((item) => item.icon === "facebook" || item.icon === "instagram")
+              .filter((item) => item.icon === "facebook" || item.icon === "instagram" || item.icon === "tiktok")
               .map((item) => {
                 const Icon = socialIcons[item.icon as keyof typeof socialIcons];
                 return (

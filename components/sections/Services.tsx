@@ -2,12 +2,21 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const services = [
-  { title: "Initial Claim Consultation", icon: "/assets/icons/services/claim-consultation.png" },
-  { title: "Accident Documentation Review", icon: "/assets/icons/services/accident-documentation.png" },
-  { title: "Repair Estimate Analysis", icon: "/assets/icons/services/repair-estimate-analysis.png" },
-  { title: "Repair Invoice Review", icon: "/assets/icons/services/repair-invoice-review.png" },
-  { title: "Insurance Estimate Comparison", icon: "/assets/icons/services/insurance-estimate-comparison.png" },
-  { title: "Damage Severity Assessment", icon: "/assets/icons/services/damage-severity-assessment.png" },
+  {
+    title: "Diminished Value Disputes",
+    icon: "/assets/icons/services/claim-consultation.png",
+    desc: "Even after excellent repairs, an accident history can lower your vehicle's market value. We evaluate and document the difference between its value before and after the accident.",
+  },
+  {
+    title: "Total Loss Valuation Disputes",
+    icon: "/assets/icons/services/insurance-estimate-comparison.png",
+    desc: "If you disagree with the valuation your insurer assigned to a totaled vehicle, we review the valuation and related documentation to determine whether it should be disputed.",
+  },
+  {
+    title: "Loss of Use Claims",
+    icon: "/assets/icons/services/repair-invoice-review.png",
+    desc: "If you experienced financial loss from being unable to use your vehicle after an accident, we evaluate potential loss of use claims.",
+  },
 ];
 
 export default function Services() {
@@ -17,6 +26,10 @@ export default function Services() {
         <h2 className="text-center text-3xl font-bold text-foreground">
           Our Services
         </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-center text-muted-foreground">
+          We help vehicle owners identify and pursue financial losses related
+          to their vehicle after an automobile accident.
+        </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
@@ -28,12 +41,16 @@ export default function Services() {
                 <CardTitle>{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground">
-                Professional, independent evaluation as part of your diminished
-                value claim.
+                {service.desc}
               </CardContent>
             </Card>
           ))}
         </div>
+
+        <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">
+          Where a claim is pursued or submitted to an insurance carrier, it is
+          handled through an attorney partnered with RAV.
+        </p>
       </div>
     </section>
   );

@@ -16,10 +16,10 @@ export default function ContactPage() {
         />
       </div>
 
-      <h1 className="text-4xl font-bold text-foreground">Contact Us</h1>
+      <h1 className="text-4xl font-bold text-foreground">Free Claim Review</h1>
       <p className="mt-4 text-muted-foreground">
-        Request a free consultation. Call {siteConfig.phone} or send us a
-        message below.
+        Complete the form below for a free claim review. Call {siteConfig.phone}{" "}
+        if you have questions.
       </p>
 
       <div className="mt-8 rounded-lg border border-border p-6">

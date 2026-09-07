@@ -2,28 +2,28 @@ import Image from "next/image";
 
 const points = [
   {
-    title: "Independent & Unbiased",
-    desc: "Evaluations that protect your rights, not the insurer's bottom line.",
+    title: "No Recovery, No Fee",
+    desc: "We operate on a contingency fee basis. If there is no recovery, you do not owe a contingency fee.",
     icon: "/assets/icons/features/independent-unbiased.png",
   },
   {
-    title: "Professional Reports",
-    desc: "Detailed, USPAP-informed appraisal reports.",
+    title: "Independent & Unbiased",
+    desc: "Evaluations that protect your rights, not the insurer's bottom line.",
     icon: "/assets/icons/features/professional-reports.png",
   },
   {
-    title: "Fast Turnaround",
-    desc: "Quick service when you need it most.",
+    title: "Professional Approach",
+    desc: "Thorough review of your accident, repairs, and insurance documentation.",
     icon: "/assets/icons/features/fast-turnaround.png",
   },
   {
-    title: "Insurance Claim Assistance",
-    desc: "We work with insurers on your behalf.",
+    title: "Partnered Attorneys",
+    desc: "Where a claim is pursued, it is handled through an attorney partnered with RAV.",
     icon: "/assets/icons/features/insurance-claim-assistance.png",
   },
   {
-    title: "Attorney Support",
-    desc: "Expert opinions and rebuttals available on your behalf.",
+    title: "Clear, Plain Language",
+    desc: "We explain your options in terms any vehicle owner can understand.",
     icon: "/assets/icons/features/attorney-support.png",
   },
 ];
@@ -47,6 +47,12 @@ export default function WhyChooseUs() {
             </div>
           ))}
         </div>
+
+        <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-muted-foreground">
+          No recovery is guaranteed. If a recovery is obtained, the applicable
+          contingency fee is 40% of the recovery, subject to the terms and
+          conditions of the signed contingency fee agreement.
+        </p>
       </div>
     </section>
   );

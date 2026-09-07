@@ -1,5 +1,6 @@
 import Image from "next/image";
-import InsuranceComparisonIcon from "@/public/icons/service-insurance-comparison.svg";
+import Link from "next/link";
+import { siteConfig } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -22,18 +23,25 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 max-w-xl text-xl text-white/90">
-          Recover the compensation you deserve with
-          independent diminished value appraisals.
+          Even excellent repairs may not restore your vehicle&apos;s market
+          value. An accident history can lower its value — and you may be
+          entitled to recover that loss.
         </p>
 
         <div className="mt-8 flex gap-4">
-          <button className="bg-accent text-white px-8 py-4 rounded">
-            Free Claim Review
-          </button>
+          <Link
+            href="/contact"
+            className="bg-accent text-white px-8 py-4 rounded font-semibold hover:bg-accent/90"
+          >
+            Get a Free Claim Review
+          </Link>
 
-          <button className="border border-white px-8 py-4 rounded text-white">
-            Call (728) 213-0495
-          </button>
+          <a
+            href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
+            className="border border-white px-8 py-4 rounded text-white hover:bg-white/10"
+          >
+            Call {siteConfig.phone}
+          </a>
         </div>
       </div>
     </section>

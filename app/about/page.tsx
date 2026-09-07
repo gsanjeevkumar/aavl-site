@@ -11,15 +11,29 @@ export default function AboutPage() {
             About Recover Accident Value
           </h1>
           <p>
-            Recover Accident Value specializes in
-            independent diminished value appraisals
-            that help vehicle owners recover compensation
-            after an accident.
+            Recover Accident Value (RAV) assists vehicle owners following an
+            automobile accident with identifying and pursuing certain financial
+            losses related to their vehicle.
           </p>
 
           <p className="mt-4">
-            Our USPAP-informed reports provide objective,
-            professional evaluations to protect your rights.
+            One of our primary services involves diminished value disputes. Even
+            when a vehicle has been repaired properly and the repairs are
+            excellent, the vehicle may still carry an accident history that
+            negatively affects its market value.
+          </p>
+
+          <p className="mt-4">
+            We also assist with total loss valuation disputes and loss of use
+            claims. When applicable, claims are pursued through an attorney
+            partnered with RAV.
+          </p>
+
+          <p className="mt-4 text-sm text-muted-foreground">
+            Recover Accident Value is not a law firm and does not provide legal
+            advice or legal representation. Any legal advice or legal
+            representation is provided solely by the attorney or law firm
+            responsible for that representation.
           </p>
         </div>
 

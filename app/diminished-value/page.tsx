@@ -22,44 +22,43 @@ export default function DiminishedValuePage() {
       </h1>
 
       <p className="mt-6 text-lg text-muted-foreground">
-        Even when a vehicle is repaired correctly, its market value can drop
-        simply because it now has an accident on its history. This loss in
-        value is known as <strong className="text-foreground">diminished value</strong>,
-        and in many cases you may be entitled to compensation for it.
+        Even when a vehicle has been repaired properly and the repairs are
+        excellent, the vehicle may still carry an accident history that
+        negatively affects its market value.
       </p>
 
       <h2 className="mt-10 text-2xl font-semibold text-foreground">
         What is diminished value?
       </h2>
       <p className="mt-3 text-muted-foreground">
-        Diminished value is the difference between a vehicle&apos;s market
-        value before an accident and its market value after repairs are
-        complete. Buyers and dealers typically pay less for a vehicle with an
-        accident history, even if the repairs were performed to a high
-        standard.
+        Diminished value refers to the difference between a vehicle&apos;s
+        market value before an accident and its market value after the
+        accident and repairs. A vehicle with an accident history is often
+        worth less than an otherwise identical vehicle without one — even if
+        the repairs were performed to a high standard.
       </p>
 
       <h2 className="mt-10 text-2xl font-semibold text-foreground">
-        How do insurance companies calculate it?
+        How RAV can help
       </h2>
       <p className="mt-3 text-muted-foreground">
-        Insurers often use formulas that undervalue the true loss. An
-        independent, USPAP-informed appraisal provides an objective,
-        defensible estimate of the actual diminished value.
+        RAV assists clients with evaluating and documenting the potential
+        difference between the vehicle&apos;s value before the accident and
+        its value after the accident and repairs. When appropriate, RAV works
+        with its partnered attorneys and law firms to pursue recovery of the
+        diminished value from the applicable insurance carrier.
       </p>
 
-      <h2 className="mt-10 text-2xl font-semibold text-foreground">
-        Who qualifies?
-      </h2>
-      <p className="mt-3 text-muted-foreground">
-        If your vehicle was damaged in an accident that was not your fault
-        and has since been repaired, you may be eligible to file a
-        diminished value claim against the at-fault party&apos;s insurance.
+      <p className="mt-10 rounded-lg border border-border bg-muted p-4 text-sm text-muted-foreground">
+        Recover Accident Value is not a law firm and does not provide legal
+        advice or legal representation. Any legal advice or legal
+        representation is provided solely by the attorney or law firm
+        responsible for that representation.
       </p>
 
       <div className="mt-10">
         <Link href="/contact" className={buttonVariants({ size: "lg" })}>
-          Request a Free Assessment
+          Get a Free Claim Review
         </Link>
       </div>
     </main>
