@@ -140,7 +140,14 @@ export async function POST(request: Request) {
       });
     } catch (err) {
       console.error("SMTP send error:", err);
-      // Continue – we still respond success to the client to avoid exposing internal errors.
+      // Surface the real error so we can debug in production.
+      return NextResponse.json(
+        {
+          success: false,
+          error: err instanceof Error ? err.message : String(err),
+        },
+        { status: 500 }
+      );
     }
     console.log("Free claim review submission:", { fullName, email, phone });
 
