@@ -134,7 +134,7 @@ export async function POST(request: Request) {
     `;
     try {
       await sendSmtpEmail({
-        to: "gsanjeevkumar@gmail.com",
+        to: "Recoveraccidentvalue@gmail.com",
         subject: `New free claim review from ${fullName}`,
         html: emailHtml,
       });
