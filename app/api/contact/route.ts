@@ -3,6 +3,7 @@
 import { NextResponse } from "next/server";
 import { sendSmtpEmail } from "@/lib/email";
 import nodemailer from "nodemailer";
+import type { SendMailOptions } from "nodemailer";
 
 interface ContactPayload {
   fullName?: string;
@@ -171,7 +172,7 @@ export async function POST(request: Request) {
       ${row("Additional Comments", additionalComments)}
     `;
     // Prepare attachments if a file was uploaded and passes validation.
-    let attachments: nodemailer.SendMailOptions["attachments"] = [];
+    const attachments: SendMailOptions["attachments"] = [];
     if (file) {
       // Validate file type and size.
       if (file.type !== "application/pdf") {
