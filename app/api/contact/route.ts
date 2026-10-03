@@ -2,6 +2,7 @@
 
 import { NextResponse } from "next/server";
 import { sendSmtpEmail } from "@/lib/email";
+import nodemailer from "nodemailer";
 
 interface ContactPayload {
   fullName?: string;
@@ -23,6 +24,10 @@ interface ContactPayload {
   settlementAccepted?: string;
   additionalComments?: string;
   accuracyConfirmed?: boolean;
+  // The file field is optional; it will be present only when the form is submitted
+  // as multipart/form-data. We keep it as a generic type because the File
+  // interface is only available in the browser.
+  attachment?: any;
 }
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -39,7 +44,40 @@ function esc(value: string): string {
 
 export async function POST(request: Request) {
   try {
-    const body = (await request.json()) as ContactPayload;
+    // Support both JSON and multipart/form-data submissions.
+    const contentType = request.headers.get("content-type") ?? "";
+    let body: ContactPayload;
+    let file: File | null = null;
+    if (contentType.includes("multipart/form-data")) {
+      const form = await request.formData();
+      body = {
+        fullName: form.get("fullName")?.toString() ?? "",
+        email: form.get("email")?.toString() ?? "",
+        phone: form.get("phone")?.toString() ?? "",
+        vehicleYear: form.get("vehicleYear")?.toString() ?? "",
+        vehicleMake: form.get("vehicleMake")?.toString() ?? "",
+        vehicleModel: form.get("vehicleModel")?.toString() ?? "",
+        accidentDate: form.get("accidentDate")?.toString() ?? "",
+        accidentDescription: form.get("accidentDescription")?.toString() ?? "",
+        atFaultInsuranceCompany: form.get("atFaultInsuranceCompany")?.toString() ?? "",
+        atFaultClaimNumber: form.get("atFaultClaimNumber")?.toString() ?? "",
+        yourCarrier: form.get("yourCarrier")?.toString() ?? "",
+        yourClaimNumber: form.get("yourClaimNumber")?.toString() ?? "",
+        vehicleRepaired: form.get("vehicleRepaired")?.toString() ?? "",
+        vehicleInPossession: form.get("vehicleInPossession")?.toString() ?? "",
+        totalLoss: form.get("totalLoss")?.toString() ?? "",
+        settlementOfferReceived: form.get("settlementOfferReceived")?.toString() ?? "",
+        settlementAccepted: form.get("settlementAccepted")?.toString() ?? "",
+        additionalComments: form.get("additionalComments")?.toString() ?? "",
+        accuracyConfirmed: form.get("accuracyConfirmed") === "true",
+      };
+      const rawFile = form.get("attachment");
+      if (rawFile instanceof File) {
+        file = rawFile;
+      }
+    } else {
+      body = (await request.json()) as ContactPayload;
+    }
 
     const fullName = body.fullName?.trim() ?? "";
     const email = body.email?.trim() ?? "";
@@ -132,11 +170,36 @@ export async function POST(request: Request) {
       <h3>Additional Information</h3>
       ${row("Additional Comments", additionalComments)}
     `;
+    // Prepare attachments if a file was uploaded and passes validation.
+    let attachments: nodemailer.SendMailOptions["attachments"] = [];
+    if (file) {
+      // Validate file type and size.
+      if (file.type !== "application/pdf") {
+        return NextResponse.json(
+          { success: false, error: "Only PDF files are allowed." },
+          { status: 400 }
+        );
+      }
+      if (file.size > 1 * 1024 * 1024) {
+        return NextResponse.json(
+          { success: false, error: "File must be 1 MB or smaller." },
+          { status: 400 }
+        );
+      }
+      const buffer = Buffer.from(await file.arrayBuffer());
+      attachments.push({
+        filename: file.name,
+        content: buffer,
+        contentType: file.type,
+      });
+    }
+
     try {
       await sendSmtpEmail({
         to: "Recoveraccidentvalue@gmail.com",
         subject: `New free claim review from ${fullName}`,
         html: emailHtml,
+        attachments,
       });
     } catch (err) {
       console.error("SMTP send error:", err);

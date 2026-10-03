@@ -26,6 +26,7 @@ type FormValues = {
   settlementAccepted: string;
   additionalComments: string;
   accuracyConfirmed: boolean;
+  attachment: File | null;
 };
 
 type FormErrors = Partial<Record<keyof FormValues, string>>;
@@ -53,6 +54,7 @@ const initialValues: FormValues = {
   settlementAccepted: "",
   additionalComments: "",
   accuracyConfirmed: false,
+  attachment: null,
 };
 
 function validate(values: FormValues): FormErrors {
@@ -118,6 +120,14 @@ export default function ContactForm() {
     }
   };
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null;
+    setForm((prev) => ({ ...prev, attachment: file }));
+    if (errors.attachment) {
+      setErrors((prev) => ({ ...prev, attachment: undefined }));
+    }
+  };
+
   const handleCheckbox = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target;
     setForm((prev) => ({ ...prev, [name]: checked }));
@@ -138,10 +148,17 @@ export default function ContactForm() {
 
     setStatus("sending");
     try {
+      const formData = new FormData();
+      Object.entries(form).forEach(([key, value]) => {
+        if (key === "attachment" && value instanceof File) {
+          formData.append(key, value);
+        } else if (value !== null && value !== undefined) {
+          formData.append(key, value as string);
+        }
+      });
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: formData,
       });
       const json = await res.json();
       if (json.success) {
@@ -289,6 +306,20 @@ export default function ContactForm() {
             value={form.additionalComments}
             onChange={handleChange}
           />
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="attachment">Attach PDF (max 1 MB)</Label>
+          <input
+            id="attachment"
+            name="attachment"
+            type="file"
+            accept="application/pdf"
+            onChange={handleFileChange}
+            className="border rounded p-2"
+          />
+          {errors.attachment && (
+            <p className="text-sm text-destructive">{errors.attachment}</p>
+          )}
         </div>
       </fieldset>
 

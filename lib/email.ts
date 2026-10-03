@@ -1,7 +1,17 @@
 import nodemailer from 'nodemailer';
 
 
-export async function sendSmtpEmail({ to, subject, html }: { to: string; subject: string; html: string }) {
+export async function sendSmtpEmail({
+  to,
+  subject,
+  html,
+  attachments,
+}: {
+  to: string;
+  subject: string;
+  html: string;
+  attachments?: nodemailer.SendMailOptions['attachments'];
+}) {
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: Number(process.env.SMTP_PORT),
@@ -17,5 +27,6 @@ export async function sendSmtpEmail({ to, subject, html }: { to: string; subject
     to,
     subject,
     html,
+    ...(attachments && { attachments }),
   });
 }
